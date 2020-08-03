@@ -1,0 +1,16 @@
+extends ../Layout/common
+block  content
+    h1 Hi
+    img(src="../Images/1.jpg", width="300px", height="150px")
+    form(action="/user/search" method="Get" class="d-flex")
+        input(type="text", name="q" class="form-control")
+        button(class="btn btn-success") Search
+    ul
+        each use in user
+            li= use.name 
+                
+                a(href="/user/" + use.id) View
+
+    a(href="/user/search") Search 
+    br
+    a(href="/user/create") Create user

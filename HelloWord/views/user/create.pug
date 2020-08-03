@@ -1,0 +1,7 @@
+extends ../Layout/common
+block  content
+    h1 Create
+    form(action="/user/create", method="post" ,class="form-group d-flex")
+        label Name
+        input(type="text", name="name", class="form-control")
+        button(class="btn btn-info") Create
