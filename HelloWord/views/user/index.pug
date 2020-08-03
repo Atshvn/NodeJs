@@ -1,16 +1,25 @@
 extends ../Layout/common
 block  content
-    h1 Hi
+    .container
+    h1 Create
     img(src="../Images/1.jpg", width="300px", height="150px")
     form(action="/user/search" method="Get" class="d-flex")
         input(type="text", name="q" class="form-control")
         button(class="btn btn-success") Search
-    ul
-        each use in user
-            li= use.name 
-                
-                a(href="/user/" + use.id) View
+    table.table
+        tr
+            th Name
+            th Phone
+            th Actions
 
-    a(href="/user/search") Search 
+        each use in user
+            tr
+                td=use.name 
+                td=use.phone    
+                td 
+                    a.btn.btn-light(href="/user/" + use.id) View
+
+    a.btn.btn-light(href="/user/search") Search 
     br
-    a(href="/user/create") Create user
+    hr
+    a.btn.btn-light(href="/user/create") Create user

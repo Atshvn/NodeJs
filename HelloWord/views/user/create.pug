@@ -1,7 +1,16 @@
 extends ../Layout/common
 block  content
     h1 Create
-    form(action="/user/create", method="post" ,class="form-group d-flex")
-        label Name
-        input(type="text", name="name", class="form-control")
-        button(class="btn btn-info") Create
+    if err
+        each er of err
+            .alert.alert-danger=er
+
+    form(action="/user/create", method="post" ,class="form-group")
+        label(for="name") Name
+        input#name.form-control(type="text", name="name", value=value? value.name : "")
+        label(for="Phone") Phone
+        input#phone.form-control(type="text", name="phone", value=value? value.phone : "")
+        br
+        br
+        
+        button.btn.btn-info Create
