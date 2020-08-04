@@ -2,7 +2,9 @@
   "user": [
     {
       "name": "Tuan Anh",
-      "id": "OFUUkmb4j"
+      "id": "OFUUkmb4j",
+      "email": "tuananh.0706999@gmail.com",
+      "password": "0971718434hihi"
     },
     {
       "name": "Thong",
@@ -34,6 +36,11 @@
       "name": "Thong",
       "phone": "1231231231",
       "id": "Wk8RBRob-"
+    },
+    {
+      "name": "Hoang",
+      "phone": "0971718434",
+      "id": "G6H7qyEMf"
     }
   ]
 }
