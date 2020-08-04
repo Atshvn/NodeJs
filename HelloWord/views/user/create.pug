@@ -7,7 +7,7 @@ block  content
 
     form(action="/user/create", method="post" ,class="form-group")
         label(for="name") Name
-        input#name.form-control(type="text", name="name", value=value? value.name : "")
+        input#name.form-control(type="text", name="name", require)
         label(for="Phone") Phone
         input#phone.form-control(type="text", name="phone", value=value? value.phone : "")
         br

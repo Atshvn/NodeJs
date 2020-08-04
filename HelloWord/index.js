@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+console.log(process.env.SESSION_SECRET);
 const express = require('express');
 const app= express();
 const port= 3000;
@@ -19,7 +22,7 @@ var authMiddelware= require('./middlewares/auth.middelwares');
 // using req.body
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-app.use(cookieParser());
+app.use(cookieParser(process.env.SESSION_SECRET));
 
 // using forder Public de su dung img vs css
 app.use(express.static('Public'));
